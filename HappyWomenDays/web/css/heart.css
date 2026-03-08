@@ -1,0 +1,44 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 7, 2026, 2:24:01 AM
+    Author     : Admin
+*/
+
+.heart {
+    width: 120px;
+    height: 120px;
+    background: pink;
+    position: relative;
+    margin: 50px auto;
+    transform: rotate(-45deg);
+    animation: beat 1s infinite;
+}
+.heart:before,
+.heart:after{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: pink;
+    border-radius: 50%;
+}
+.heart:before{
+    top: -60px;
+}
+.heart:after{
+    left: 60px;
+}
+@keyframes beat{
+    0%{
+        transform:scale(1) rotate(-45deg);
+    }
+    50%{
+        transform:scale(1.2) rotate(-45deg);
+    }
+    100%{
+        transform:scale(1) rotate(-45deg);
+    }
+}
